@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MingCompany1.API.props" />
+</Project>
