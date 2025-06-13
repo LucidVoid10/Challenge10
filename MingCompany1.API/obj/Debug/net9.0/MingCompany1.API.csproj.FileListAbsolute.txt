@@ -61,3 +61,9 @@ C:\Users\grssc\OneDrive\Escritorio\Aplicacione Web-Clase\MingCompany1\MingCompan
 C:\Users\grssc\OneDrive\Escritorio\Aplicacione Web-Clase\MingCompany1\MingCompany1.API\obj\Debug\net9.0\MingCompany1.API.pdb
 C:\Users\grssc\OneDrive\Escritorio\Aplicacione Web-Clase\MingCompany1\MingCompany1.API\obj\Debug\net9.0\MingCompany1.API.genruntimeconfig.cache
 C:\Users\grssc\OneDrive\Escritorio\Aplicacione Web-Clase\MingCompany1\MingCompany1.API\obj\Debug\net9.0\ref\MingCompany1.API.dll
+C:\Users\grssc\OneDrive\Escritorio\Aplicacione Web-Clase\MingCompany1\MingCompany1.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\grssc\OneDrive\Escritorio\Aplicacione Web-Clase\MingCompany1\MingCompany1.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\grssc\OneDrive\Escritorio\Aplicacione Web-Clase\MingCompany1\MingCompany1.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\grssc\OneDrive\Escritorio\Aplicacione Web-Clase\MingCompany1\MingCompany1.API\obj\Debug\net9.0\MingCompany1.API.sourcelink.json
+C:\Users\grssc\OneDrive\Escritorio\Aplicacione Web-Clase\MingCompany1\MingCompany1.API\bin\Debug\net9.0\MingCompany1.API.xml
+C:\Users\grssc\OneDrive\Escritorio\Aplicacione Web-Clase\MingCompany1\MingCompany1.API\obj\Debug\net9.0\MingCompany1.API.xml

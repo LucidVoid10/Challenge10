@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MingCompany1.API</name>
+    </assembly>
+    <members>
+        <member name="T:MingCompany.Application.Commands.CreateOperationCommand">
+            <summary>
+            Comando para crear una nueva operación minera.
+            </summary>
+        </member>
+        <member name="P:MingCompany.Application.Commands.CreateOperationCommand.Title">
+            <summary>
+            Título de la operación.
+            </summary>
+        </member>
+        <member name="P:MingCompany.Application.Commands.CreateOperationCommand.Type">
+            <summary>
+            Tipo de operación (por ejemplo: Exploración, Extracción, etc.).
+            </summary>
+        </member>
+        <member name="P:MingCompany.Application.Commands.CreateOperationCommand.Date">
+            <summary>
+            Fecha en que se realizará o realizó la operación.
+            </summary>
+        </member>
+        <member name="P:MingCompany.Application.Commands.CreateOperationCommand.Status">
+            <summary>
+            Estado de la operación (activa o inactiva).
+            </summary>
+        </member>
+        <member name="T:MingCompany.Application.Commands.DeleteOperationCommand">
+            <summary>
+            Comando para eliminar una operación por su ID.
+            </summary>
+        </member>
+        <member name="P:MingCompany.Application.Commands.DeleteOperationCommand.Id">
+            <summary>
+            Identificador único de la operación a eliminar.
+            </summary>
+        </member>
+        <member name="T:MingCompany.Api.Controllers.OperationsController">
+            <summary>
+            API para gestionar operaciones mineras.
+            </summary>
+        </member>
+        <member name="M:MingCompany.Api.Controllers.OperationsController.GetAllOperations">
+            <summary>
+            Obtiene todas las operaciones registradas.
+            </summary>
+            <returns>Lista de operaciones mineras</returns>
+            <response code="200">Operaciones recuperadas exitosamente</response>
+            <response code="500">Error interno del servidor</response>
+        </member>
+        <member name="M:MingCompany.Api.Controllers.OperationsController.CreateOperation(MingCompany.Application.Commands.CreateOperationCommand)">
+            <summary>
+            Crea una nueva operación minera.
+            </summary>
+            <param name="command">Datos de la operación a crear</param>
+            <returns>Operación creada</returns>
+            <response code="201">Operación creada exitosamente</response>
+            <response code="400">Error de validación o datos inválidos</response>
+            <response code="500">Error interno del servidor</response>
+        </member>
+        <member name="M:MingCompany.Api.Controllers.OperationsController.DeleteOperation(System.Int32)">
+            <summary>
+            Elimina una operación minera por ID.
+            </summary>
+            <param name="id">ID de la operación a eliminar</param>
+            <returns>Sin contenido si fue eliminada, o error si no se encontró</returns>
+            <response code="204">Operación eliminada exitosamente</response>
+            <response code="404">No se encontró la operación</response>
+            <response code="400">Error de dominio en la eliminación</response>
+            <response code="500">Error interno del servidor</response>
+        </member>
+    </members>
+</doc>

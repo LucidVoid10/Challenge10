@@ -17,15 +17,19 @@ namespace MingCompany.Application.Handlers
 
         public async Task<bool> HandleAsync(DeleteOperationCommand command)
         {
-            var operation = await _repository.GetByIdAsync(command.Id);
-            
-            if (operation == null)
-                return false;
+            if (command == null)
+                throw new ArgumentNullException(nameof(command), "El comando de eliminación no puede ser nulo.");
 
-            _domainService.ValidateOperationForDeletion(operation);
+            var operation = await _repository.GetByIdAsync(command.Id);
+
+            if (operation == null)
+                throw new InvalidOperationException($"No se encontró la operación con ID {command.Id}");
+
+            _domainService.ValidateOperationForDeletion(operation); 
 
             await _repository.DeleteAsync(operation);
             return true;
         }
+
     }
 }

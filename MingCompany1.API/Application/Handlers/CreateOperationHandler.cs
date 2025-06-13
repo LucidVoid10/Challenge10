@@ -18,6 +18,12 @@ namespace MingCompany.Application.Handlers
 
         public async Task<Operation> HandleAsync(CreateOperationCommand command)
         {
+            if (command == null)
+                throw new ArgumentNullException(nameof(command), "El comando de creación no puede ser nulo.");
+
+            if (string.IsNullOrWhiteSpace(command.Title))
+                throw new ArgumentException("El título de la operación es obligatorio.", nameof(command.Title));
+
             var operation = new Operation
             {
                 Title = command.Title,
@@ -26,9 +32,10 @@ namespace MingCompany.Application.Handlers
                 Status = command.Status
             };
 
-            _domainService.ValidateOperationForCreation(operation);
+            _domainService.ValidateOperationForCreation(operation); 
 
             return await _repository.AddAsync(operation);
         }
+
     }
 }
