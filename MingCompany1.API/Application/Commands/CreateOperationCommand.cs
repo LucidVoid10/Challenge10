@@ -11,19 +11,21 @@ namespace MingCompany.Application.Commands
         /// <summary>
         /// Título de la operación.
         /// </summary>
-        [Required]
+        [Required(ErrorMessage = "El título es obligatorio.")]
+        [MinLength(3, ErrorMessage = "El título debe tener al menos 3 caracteres.")]
         public string Title { get; set; } = string.Empty;
 
         /// <summary>
         /// Tipo de operación (por ejemplo: Exploración, Extracción, etc.).
         /// </summary>
-        [Required]
+        [Required(ErrorMessage = "El tipo de operación es obligatorio.")]
         public OperationType Type { get; set; }
 
         /// <summary>
         /// Fecha en que se realizará o realizó la operación.
         /// </summary>
-        [Required]
+        [Required(ErrorMessage = "La fecha es obligatoria.")]
+        [DataType(DataType.Date)]
         public DateTime Date { get; set; }
 
         /// <summary>
